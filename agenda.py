@@ -30,42 +30,42 @@ class Agenda:
     def addContact(self, name, phone):
         if self._validateName(name):
             self.contacts[name] = [phone]
-            print("Contact successfully added")
+            print("=== Contact successfully added ===")
         else:
-            print("Contact already exists, validating phone number...")
+            print("=== Contact already exists, validating phone number... ===")
             if self._validatePhone(name, phone):
                 self.contacts[name].append(phone)
-                print(f"Phone number was added to {name}")
+                print(f"=== Phone number was added to {name} ===")
             else:
-                print(f"Phone already exists for {name}")
+                print(f"=== Phone already exists for {name} ===")
 
     def updateName(self, name, new_name):
         if not self._validateName(name):
             self._replaceName({name:new_name})
-            print(f"Contact name changed from {name} to {new_name}")
+            print(f"=== Contact name changed from {name} to {new_name} ===")
         else:
-            print(f"No contact with name {name} was found")
+            print(f"=== No contact with name {name} was found ===")
 
     def updatePhone(self, name, phone):
         if self._validateName(name):
-            print("Contact not found in agenda")
+            print("=== Contact not found in agenda ===")
         else:
             while(True):
                 answer = input(f"Add or Replace phone number for {name}? (a/r): ")
                 if answer == "a":
                     if phone not in self.contacts[name]:
                         self.contacts[name].append(phone)
-                        print(f"Phone number successfully added for {name}")
+                        print(f"=== Phone number successfully added for {name} ===")
                         break
                     else:
-                        print(f"Phone number already exists under {name}")
+                        print(f"=== Phone number already exists under {name} ===")
                         break
                 elif answer == "r":
                     self.contacts[name] = [phone]
-                    print(f"Phone number successfully replaced for {name}")
+                    print(f"=== Phone number successfully replaced for {name} ===")
                     break
                 else:
-                    print("Not a valid input")
+                    print("=== Not a valid input ===")
 
     def delContact(self, name):
         if not self._validateName(name):
@@ -102,7 +102,7 @@ if __name__ == "__main__":
             
             elif a == "a":
                 person = Contact(input("Provide a name: \n"), int(input("Provide a phone number: ")))
-                print(f"Adding Contact: {person.name}, {person.phone} ...")
+                print(f"=== Adding Contact: {person.name}, {person.phone} ... ===")
                 agenda.addContact(person.name, person.phone)
 
             elif a == "un":
@@ -118,5 +118,5 @@ if __name__ == "__main__":
                 break
         
         except:
-            print("Nice, you broke it... quitting....")
+            print("Nice, you broke it... quitting... =(")
             break
