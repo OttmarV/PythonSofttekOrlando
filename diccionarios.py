@@ -19,4 +19,9 @@ for key in dic.keys():
 for key, value in dic.items():
     print(key, value)
 
+count ={}
+for character in "Hola Mundo":
+    count.setdefault(character, 0)
+    count[character] += 1
 
+print(count)
