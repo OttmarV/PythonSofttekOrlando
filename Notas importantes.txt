@@ -1,0 +1,20 @@
+http://pythontutor.com/
+https://www.youtube.com/watch?v=_AEJHKGk9ns&t=377s&ab_channel=PyCon2015
+
+Los nombres de las variables, hacen referencia a valores. 
+Muchas variables pueden hacer referencia a un valor.
+Los nombres son reasignados independientemente 
+En python, la memoria se maneja dinamicamente, es decir, los valores existen hasta que no tengan referencia.
+Las asignaciones nunca copian datos. 
+Alias mutable:
+    1. Sucede cuando se utiliza un valor mutable
+    2. Mas de un nombre referenciando
+    3. El valor cambia 
+    4. Todos los nombres ven el cambio
+Los tipos de datos inmutables, no les afecta el alias. 
+Decir que vamos a "cambiar" un valor, puede resultar ambiguo:
+    Si "cambiamos" un entero, no estamos cambiando el valor, solo la referencia hacia un nuevo objeto.
+    Si "cambiamos" una lista, no cambiamos la referencia, sigue siendo el mismo objeto, mutamos el valor.
+Los objetos mutables e inmutables son asignados de la misma forma. 
+Las referencias pueden ser más que variables, pueden ser indices de los elementos de una lista por ejemplo, atributos de objetos, keys etc. 
+Recomendacion: No mutar objetos, crear nuevos y cambiar referencia.
