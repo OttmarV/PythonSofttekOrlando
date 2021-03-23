@@ -7,7 +7,7 @@
 def penultimo(estudiantes):
     #Conversion de lista a diccionario
     estudiantes_dict = dict(estudiantes)
-    print(estudiantes_dict)
+    #print(estudiantes_dict)
 
     #Cambio, scores son keys y nombres son values
     new_dict = {}
@@ -16,7 +16,7 @@ def penultimo(estudiantes):
             new_dict[score] = [name]
         else:
             new_dict[score].append(name)
-    print(new_dict)
+    #print(new_dict)
 
     #Asignacion de valores requeridos
     calificacion, alumnos = sorted(new_dict.items(), key=lambda x:x[0])[1]
@@ -28,5 +28,4 @@ if __name__ == "__main__":
     estudiantes = [["orlando",10], ["pedro", 30], ["juan", 15], ["betty", 50],["alejandra", 12], ["omar", 15], ["sergio",12],["andres",30], ["luis",10]]
 
     penultimo(estudiantes)
-
 
