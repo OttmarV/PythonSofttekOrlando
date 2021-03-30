@@ -32,7 +32,7 @@ print(archivo.read()) #read, muestra todo el contenido del archivo en una sola c
 archivo.close() #close, cierra el archivo, si se abrió con "w" o "a", toda la información escrita se guarda sobre el archivo
 
 #leer archivo linea por linea:
-archivo = open("texto.txt", "r")
+archivo = open("mbox-short.txt", "r")
 print(archivo.readline())#readline, lee el archivo una linea a la vez
 print(archivo.readline())#si se ejecuta en secuencia continúa línea
 print(archivo.tell())#tell, nos indica la posición donde se encuentra el cursor
