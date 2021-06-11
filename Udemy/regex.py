@@ -33,6 +33,9 @@ Using \1, \2 and so will substitute group 1, 2, etc in the regex pattern.
 Passing re.VERBOSE lets you add whitespace and comments to the regex string passed to re.compile().
 If you want to pass multiple arguments (re.DOTALL , re.IGNORECASE, re.VERBOSE), combine them with the | bitwise operator.
 
+
+Look Ahead
+Look Behind
 '''
 
 
@@ -148,3 +151,23 @@ print(type(mo))
 print(mo.group())
 print(mo.group(1))
 print(mo.group(2))
+
+
+
+s = 'aaa@xxx.com bbb@yyy.com ccc@zzz.com'
+print(re.sub('([a-z]*)@', r'\1-123', s))
+
+s = '__commit__'
+print(re.search(r'([A-Za-z0-9_])\1+', s))
+
+import re
+s = '4542867'
+print(re.findall(r'(\d)\d\1+', s))
+print(bool(re.match(r'^[1-9][\d]{5}$', s)))
+
+
+x = lambda : "I know how to call this function."
+print(x())
+
+for i in range(2,3):
+    print(i)
